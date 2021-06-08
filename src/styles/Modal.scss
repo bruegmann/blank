@@ -1,5 +1,6 @@
 .modal-backdrop {
     background-color: var(--modal-backdrop-bg);
+    backdrop-filter: blur(10px);
     position: absolute;
     top: 0;
     left: 0;
@@ -13,9 +14,26 @@
     left: 0;
     width: 100%;
     height: 100%;
+    animation: fadeIn 200ms;
 
     &:not(.show) {
         display: none;
+    }
+
+    &.fadeOut {
+        animation: fadeOut 100ms 100ms;
+    }
+}
+
+@keyframes fadeIn {
+    0%, 50% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
     }
 }
 
@@ -27,6 +45,25 @@
     position: relative;
     padding: 1rem calc(50% - 24rem);
     margin: 0 1rem;
+    animation: appear 200ms;
+}
+
+.modal.fadeOut .modal-content {
+    animation: disappear 200ms;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes disappear {
+    to {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
 }
 
 .modal-body {
