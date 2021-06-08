@@ -1,0 +1,34 @@
+.modal-backdrop {
+    background-color: var(--modal-backdrop-bg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    &:not(.show) {
+        display: none;
+    }
+}
+
+.modal-header, .modal-header > * {
+    color: var(--modal-header-color);
+}
+
+.modal-content {
+    position: relative;
+    padding: 1rem calc(50% - 24rem);
+    margin: 0 1rem;
+}
+
+.modal-body {
+    box-shadow: 0 0 0 1px var(--control-bg);
+}

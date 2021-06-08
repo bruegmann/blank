@@ -1,0 +1,55 @@
+window {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+body {
+    font-family: $font-family-base;
+    line-height: 1.5;
+    margin: 0;
+    background-color: var(--body-bg);
+    color: var(--body-color);
+}
+
+button, input, textarea {
+    font: inherit;
+    color: inherit;
+    line-height: 1rem;
+}
+
+a {
+    color: inherit;
+    transition: color .2s;
+    text-decoration: none;
+
+    &:hover {
+        color: var(--primary-normal);
+    }
+}
+
+.link-area {
+    a:not(.present-link):not(.btn):not(.no-dotted) {
+        border-bottom: 1px dotted;
+        &:hover {
+            border-bottom: 1px solid;
+        }
+    }
+}
+
+/* ------- */
+
+h1, h2, h3 {
+    color: var(--front-color);
+    font-weight: 700;
+    line-height: 1.2;
+}
