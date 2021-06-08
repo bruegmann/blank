@@ -1,9 +1,9 @@
 .neumorphism-shadow {
-    box-shadow: var(--neumorphism-shadow);
+    box-shadow: 35px 35px 63px var(--neumorphism-shadow-color), -35px -35px 63px var(--neumorphism-light-color);
 }
 
 .neumorphism-shadow-sm {
-    box-shadow: var(--neumorphism-shadow-sm);
+    box-shadow: 8px 8px 16px var(--neumorphism-shadow-color), -4px -4px 16px var(--neumorphism-light-color);
 }
 
 .body-bg {

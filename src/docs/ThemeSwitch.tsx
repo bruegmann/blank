@@ -38,7 +38,7 @@ export function ThemeSwitch() {
     }, [])
 
     return (
-        <Button onClick={toggleTheme} className="d-inline-flex align-items-center">
+        <Button onClick={toggleTheme} className="d-inline-flex align-items-center neumorphism-shadow-sm">
             {theme === "light" ?
                 <>
                     <MoonStars className="me-1" /> {getPhrase("Switch to dark theme")}
