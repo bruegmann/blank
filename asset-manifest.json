@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/blank/static/css/main.ccf210f9.chunk.css",
-    "main.js": "/blank/static/js/main.5602c635.chunk.js",
-    "main.js.map": "/blank/static/js/main.5602c635.chunk.js.map",
+    "main.css": "/blank/static/css/main.26f3a68b.chunk.css",
+    "main.js": "/blank/static/js/main.bd617409.chunk.js",
+    "main.js.map": "/blank/static/js/main.bd617409.chunk.js.map",
     "runtime-main.js": "/blank/static/js/runtime-main.118c0415.js",
     "runtime-main.js.map": "/blank/static/js/runtime-main.118c0415.js.map",
     "static/js/2.06304b50.chunk.js": "/blank/static/js/2.06304b50.chunk.js",
     "static/js/2.06304b50.chunk.js.map": "/blank/static/js/2.06304b50.chunk.js.map",
     "index.html": "/blank/index.html",
-    "static/css/main.ccf210f9.chunk.css.map": "/blank/static/css/main.ccf210f9.chunk.css.map",
+    "static/css/main.26f3a68b.chunk.css.map": "/blank/static/css/main.26f3a68b.chunk.css.map",
     "static/js/2.06304b50.chunk.js.LICENSE.txt": "/blank/static/js/2.06304b50.chunk.js.LICENSE.txt",
     "static/media/docs.scss": "/blank/static/media/work-sans-v8-latin-regular.60d3072c.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.118c0415.js",
     "static/js/2.06304b50.chunk.js",
-    "static/css/main.ccf210f9.chunk.css",
-    "static/js/main.5602c635.chunk.js"
+    "static/css/main.26f3a68b.chunk.css",
+    "static/js/main.bd617409.chunk.js"
   ]
 }
