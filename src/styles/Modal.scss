@@ -42,10 +42,18 @@
 }
 
 .modal-content {
-    position: relative;
-    padding: 1rem calc(50% - 24rem);
+    position: absolute;
+    left: calc(50% - 24rem);
+    right: calc(50% - 24rem);
     margin: 0 1rem;
     animation: appear 200ms;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        left: 0;
+        right: 0;
+    }
 }
 
 .modal.fadeOut .modal-content {
@@ -55,14 +63,14 @@
 @keyframes appear {
     from {
         opacity: 0;
-        transform: translateY(-100%);
+        transform: translateY(-100%) scale(.8);
     }
 }
 
 @keyframes disappear {
     to {
         opacity: 0;
-        transform: translateY(-100%);
+        transform: translateY(-100%) scale(.8);
     }
 }
 

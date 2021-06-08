@@ -27,12 +27,12 @@ export default function Modal({ children, show, toggle, title }: ModalProps) {
             <div className={clsx("modal-backdrop", { show })} onClick={doToggle} />
 
             <div className="modal-content" role="document">
-                <div className="modal-header d-flex justify-content-between mt-3 mb-1">
+                <div className="modal-header d-flex justify-content-between mt-3 mb-2">
                     <h2 className="m-0">{title}</h2>
 
-                    <button className="btn-close" onClick={doToggle}><X /></button>
+                    <button className="btn-close" onClick={doToggle} aria-label="Close"><X /></button>
                 </div>
-                <div className="modal-body body-bg p-3 rounded">
+                <div className="modal-body body-bg-stronger p-3 rounded">
                     {children}
                 </div>
             </div>
