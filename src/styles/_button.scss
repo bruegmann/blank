@@ -23,6 +23,15 @@
         }
     }
 
+    &.silent {
+        background-color: transparent;
+
+        &:hover {
+            background-color: var(--control-bg-stronger);
+            color: var(--front-color) !important;
+        }
+    }
+
     &:active {
         background-color: var(--secondary-hover) !important;
     }

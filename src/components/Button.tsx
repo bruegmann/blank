@@ -5,17 +5,19 @@ export interface ButtonBaseProps {
     className?: string
     primary?: boolean
     shadow?: boolean | "sm"
+    silent?: boolean
 }
 
-const buttonAttrShadow = { primary: undefined, shadow: undefined }
+const buttonAttrShadow = { primary: undefined, shadow: undefined, silent: undefined }
 
 function getButtonClassName(props: ButtonBaseProps) {
-    const { primary, shadow } = props
+    const { primary, shadow, silent } = props
 
     return clsx("btn px-3 py-2 rounded", {
-        primary: primary,
+        primary,
         "neumorphism-shadow-sm": shadow === "sm" || shadow === undefined,
-        "neumorphism-shadow": shadow === true
+        "neumorphism-shadow": shadow === true,
+        silent
     }, props.className)
 }
 
