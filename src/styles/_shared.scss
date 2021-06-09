@@ -1,0 +1,14 @@
+.btn, .form-control {
+    &:focus, &:focus-within {
+        outline: none;
+        box-shadow: 0 0 0 .2rem var(--primary-normal-25);
+
+        &.neumorphism-shadow {
+            box-shadow: 0 0 0 .2rem var(--primary-normal-25), $neumorphism-shadow-box-shadow;
+        }
+
+        &.neumorphism-shadow-sm {
+            box-shadow: 0 0 0 .2rem var(--primary-normal-25), $neumorphism-shadow-box-shadow-sm;
+        }
+    }
+}

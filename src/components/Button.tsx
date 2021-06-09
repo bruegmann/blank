@@ -10,7 +10,7 @@ export interface ButtonBaseProps {
 
 const buttonAttrShadow = { primary: undefined, shadow: undefined, silent: undefined }
 
-function getButtonClassName(props: ButtonBaseProps) {
+function getClassName(props: ButtonBaseProps) {
     const { primary, shadow, silent } = props
 
     return clsx("btn px-3 py-2 rounded", {
@@ -25,7 +25,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>, Bu
 export function Button(props: ButtonProps) {
     return (
         <button {...Object.assign({}, props, buttonAttrShadow) as unknown as ButtonHTMLAttributes<HTMLButtonElement>}
-            className={getButtonClassName(props)}
+            className={getClassName(props)}
         >
             {props.children}
         </button>
@@ -37,7 +37,7 @@ export interface AnchorButtonProps extends AnchorHTMLAttributes<HTMLAnchorElemen
 export function AnchorButton(props: AnchorButtonProps) {
     return (
         <a {...Object.assign({}, props, buttonAttrShadow) as unknown as AnchorHTMLAttributes<HTMLAnchorElement>}
-            className={getButtonClassName(props)}
+            className={getClassName(props)}
         >
             {props.children}
         </a>

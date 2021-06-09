@@ -7,6 +7,7 @@ import { MenuItem } from "./docs/MenuItem"
 import { AnchorButton, Button } from "./components/Button"
 import ExampleModal from "./docs/ExampleModal"
 import { CSSProperties, useState } from "react"
+import ExampleFormControl from "./docs/ExampleFormControl"
 
 function App() {
     const [customFont, setCustomFont] = useState<boolean>(true)
@@ -48,6 +49,8 @@ function App() {
                     <Button silent shadow={false} className="me-3">Silent button without shadow</Button>
                     <Button shadow={false}>Button without shadow</Button>
                 </div>
+
+                <ExampleFormControl />
 
                 <div className="p-3 my-3 body-bg-stronger neumorphism-shadow rounded-3">
                     <h2>My card content</h2>

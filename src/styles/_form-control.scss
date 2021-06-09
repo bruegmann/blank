@@ -1,0 +1,16 @@
+.form-control {
+    background-color: var(--control-bg);
+    border: 1px solid var(--control-bg-stronger);
+}
+
+.form-control-input {
+    background-color: transparent;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+textarea.form-control, textarea.form-control-input {
+    min-height: calc(1.5em + .75rem + 2px);
+}

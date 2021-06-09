@@ -1,7 +1,5 @@
 import { X } from "react-bootstrap-icons"
 import clsx from "clsx"
-
-import "../styles/Modal.scss"
 import { ReactNode, useEffect, useState } from "react"
 
 export interface ModalProps {

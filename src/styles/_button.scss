@@ -31,19 +31,6 @@
             color: var(--front-color) !important;
         }
     }
-
-    &:focus {
-        outline: none;
-        box-shadow: 0 0 0 .1rem var(--primary-normal);
-
-        &.neumorphism-shadow {
-            box-shadow: 0 0 0 .1rem var(--primary-normal), $neumorphism-shadow-box-shadow;
-        }
-
-        &.neumorphism-shadow-sm {
-            box-shadow: 0 0 0 .1rem var(--primary-normal), $neumorphism-shadow-box-shadow-sm;
-        }
-    }
 }
 
 .btn-close {
