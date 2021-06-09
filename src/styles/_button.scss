@@ -9,7 +9,7 @@
     transition: background-color .2s;
 
     &:hover {
-        background-color: var(--front-color);
+        background-color: var(--secondary-hover);
         color: var(--body-bg) !important;
     }
 
@@ -32,13 +32,17 @@
         }
     }
 
-    &:active {
-        background-color: var(--secondary-hover) !important;
-    }
-
     &:focus {
         outline: none;
         box-shadow: 0 0 0 .1rem var(--primary-normal);
+
+        &.neumorphism-shadow {
+            box-shadow: 0 0 0 .1rem var(--primary-normal), $neumorphism-shadow-box-shadow;
+        }
+
+        &.neumorphism-shadow-sm {
+            box-shadow: 0 0 0 .1rem var(--primary-normal), $neumorphism-shadow-box-shadow-sm;
+        }
     }
 }
 

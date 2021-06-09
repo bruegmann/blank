@@ -1,6 +1,6 @@
 import "./styles/docs.scss"
 import "./styles/bootstrap.scss"
-import { Logo } from "./docs/Logo"
+import { App as AppIcon, Github } from "react-bootstrap-icons"
 import { ThemeSwitch } from "./docs/ThemeSwitch"
 import { getPhrase } from "./docs/shared"
 import { MenuItem } from "./docs/MenuItem"
@@ -9,16 +9,16 @@ import ExampleModal from "./docs/ExampleModal"
 import { CSSProperties, useState } from "react"
 
 function App() {
-    const [workSans, setWorkSans] = useState<boolean>(true)
-    const toggleWorkSans = () => setWorkSans(!workSans)
+    const [customFont, setCustomFont] = useState<boolean>(true)
+    const toggleCustomFont = () => setCustomFont(!customFont)
 
     return (
         <div className="App" style={{
-            "--font-family-base": `${workSans ? '"Work Sans", ' : ""}-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif`
+            "--font-family-base": `${customFont ? '"Inter", ' : ""}-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif`
         } as CSSProperties}>
-            <header className="container mx-3 d-flex align-items-center justify-content-between">
+            <header className="container mx-3 d-flex align-items-center justify-content-between py-4">
                 <a href="/" className="d-inline-flex align-items-center" style={{ fontSize: "48px" }}>
-                    <Logo /> <h2 className="ms-1">Design</h2>
+                    <AppIcon /> <h2 className="ms-1 mb-0">Blank</h2>
                 </a>
 
                 <nav>
@@ -32,7 +32,7 @@ function App() {
                 <h1>Blank</h1>
 
                 <div className="mb-3">
-                    <Button onClick={toggleWorkSans}>Toggle font</Button>
+                    <Button onClick={toggleCustomFont}>Toggle font</Button>
                 </div>
 
                 <a href="#">Normal link</a>
@@ -61,6 +61,12 @@ function App() {
 
                 <ExampleModal />
             </div>
+
+            <footer className="text-center">
+                <a href="https://github.com/bruegmann/blank" target="_blank" rel="noopener noreferrer" className="d-inline-flex align-items-center">
+                    <Github className="me-1" /> Code on GitHub
+                    </a>
+            </footer>
         </div>
     )
 }
