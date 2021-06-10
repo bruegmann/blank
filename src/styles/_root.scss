@@ -2,7 +2,7 @@ window {
     scroll-behavior: smooth;
 }
 
-* {
+*, ::after, ::before {
     box-sizing: border-box;
 }
 
@@ -33,7 +33,7 @@ a {
     text-decoration: none;
 
     &:hover {
-        color: var(--primary-normal);
+        color: hsl(var(--primary));
     }
 }
 

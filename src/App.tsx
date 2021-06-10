@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import DemosPage from "./docs/pages/DemosPage"
 import PostsPage from "./docs/pages/PostsPage"
 import { Logo } from "./docs/Logo"
+import { ThemeSwitch } from "./docs/ThemeSwitch"
 
 function App() {
     const [customFont, setCustomFont] = useState<boolean>(true)
@@ -25,10 +26,11 @@ function App() {
                         <Logo /> <h5 className="ms-2 mb-0">Blank</h5>
                     </a>
 
-                    <nav>
+                    <nav className="d-flex align-items-center">
                         <MenuItem to="/">{getPhrase("Home")}</MenuItem>
                         <MenuItem to="/posts">{getPhrase("Posts demo page")}</MenuItem>
-                        <Button onClick={toggleCustomFont}>Toggle font</Button>
+                        <Button onClick={toggleCustomFont} className="mx-3">Toggle font</Button>
+                        <ThemeSwitch />
                     </nav>
                 </header>
 
