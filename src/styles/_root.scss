@@ -31,8 +31,10 @@ a {
     color: inherit;
     transition: color .2s;
     text-decoration: none;
+}
 
-    &:hover {
+@media (hover: hover) {
+    a:hover {
         color: hsl(var(--primary));
     }
 }

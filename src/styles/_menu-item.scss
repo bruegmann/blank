@@ -1,0 +1,21 @@
+.menu-item {
+    &.active {
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0; right: 0; bottom: 0;
+            height: .25rem;
+            background-color: var(--control-bg-even-stronger);
+            border-top-left-radius: 999rem;
+            border-top-right-radius: 999rem;
+            animation: menu-item-border-appear .2s;
+        }
+    }
+}
+
+@keyframes menu-item-border-appear {
+    from {
+        height: 0;
+    }
+}

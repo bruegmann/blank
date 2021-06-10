@@ -5,9 +5,9 @@ $medi-light-grey: #e0e0e0;
 $light-grey: #f2f2f2;
 $white: #ffffff;
 
-$primary: #2997b9;
-$lighter-primary: #34acdb;
-$darker-primary: #076d7f;
+$primary: #2997b9 !default;
+$lighter-primary: #34acdb !default;
+$darker-primary: #076d7f !default;
 
 $secondary: $middle-grey;
 $lighter-secondary: $normal-grey;

@@ -21,18 +21,20 @@ function App() {
             <div className="App" style={{
                 "--font-family-base": `${customFont ? '"Inter", ' : ""}-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif`
             } as CSSProperties}>
-                <header className="container mx-3 d-flex align-items-center justify-content-between py-4">
+                <header className="container mx-3 d-md-flex align-items-center justify-content-between py-4">
                     <a href="/" className="d-inline-flex align-items-center" style={{ fontSize: "48px" }}>
-                        <Logo /> <h5 className="ms-2 mb-0">Blank</h5>
+                        <Logo /> <h6 className="ms-2 mb-0">Blank</h6>
                     </a>
 
-                    <nav className="d-flex align-items-center">
+                    <nav className="d-sm-flex align-items-center">
                         <MenuItem to="/">{getPhrase("Home")}</MenuItem>
                         <MenuItem to="/posts">{getPhrase("Posts demo page")}</MenuItem>
                         <Button onClick={toggleCustomFont} className="mx-3">Toggle font</Button>
                         <ThemeSwitch />
                     </nav>
                 </header>
+
+                <div className="mx-3 mb-3 border-top" />
 
                 <Switch>
                     <Route path="/posts">

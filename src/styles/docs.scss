@@ -9,6 +9,10 @@
          url("../fonts/work-sans-v8-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
+$primary: #2ecc71;
+$lighter-primary: #4ad685;
+$darker-primary: #27ad5f;
+
 @import "./main";
 
 .App {
