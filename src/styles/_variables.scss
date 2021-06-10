@@ -36,7 +36,7 @@ $neumorphism-shadow-box-shadow-sm: 8px 8px 16px var(--neumorphism-shadow-color),
         --neumorphism-shadow-color: #{rgba(#e5e5e5, .5)};
     }
 
-    --modal-backdrop-bg: #{rgba(#080c0e,.9)};
+    --modal-backdrop-bg: #{derive-rgb-values-from-hex(#151d22)};
     --modal-header-color: white;
 }
 
@@ -60,7 +60,7 @@ $neumorphism-shadow-box-shadow-sm: 8px 8px 16px var(--neumorphism-shadow-color),
         --neumorphism-shadow-color: #{rgba(#090d0f, .5)};
     }
 
-    --modal-backdrop-bg: #{rgba(#080c0e,.9)};
+    --modal-backdrop-bg: #{derive-rgb-values-from-hex(#0f1418)};
     --modal-header-color: white;
 }
 
