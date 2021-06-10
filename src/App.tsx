@@ -15,7 +15,7 @@ function App() {
     const toggleCustomFont = () => setCustomFont(!customFont)
 
     return (
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
             <div className="App" style={{
                 "--font-family-base": `${customFont ? '"Inter", ' : ""}-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif`
             } as CSSProperties}>
