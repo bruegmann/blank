@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 404 404" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-2733.37,-151.568)">
+        <g id="Blank" transform="matrix(1,0,0,1,2238.48,151.568)">
+            <rect x="494.892" y="0" width="403.28" height="403.28" style="fill:none;"/>
+            <g>
+                <g transform="matrix(1,0,0,1,494.892,0)">
+                    <path d="M403.23,88.693C403.23,39.742 363.488,0 314.537,0L88.773,0C39.822,0 0.08,39.742 0.08,88.693L0.08,314.457C0.08,363.408 39.822,403.15 88.773,403.15L314.537,403.15C363.488,403.15 403.23,363.408 403.23,314.457L403.23,88.693Z" style="fill:url(#_Linear1);"/>
+                    <clipPath id="_clip2">
+                        <path d="M403.23,88.693C403.23,39.742 363.488,0 314.537,0L88.773,0C39.822,0 0.08,39.742 0.08,88.693L0.08,314.457C0.08,363.408 39.822,403.15 88.773,403.15L314.537,403.15C363.488,403.15 403.23,363.408 403.23,314.457L403.23,88.693Z"/>
+                    </clipPath>
+                    <g clip-path="url(#_clip2)">
+                        <rect x="0" y="0.13" width="403.15" height="403.15" style="fill:url(#_Radial3);"/>
+                    </g>
+                </g>
+                <g transform="matrix(0.951974,0,0,0.951974,-2100.11,-134.56)">
+                    <path d="M3048.02,313.454C3048.02,274.494 3016.39,242.864 2977.43,242.864L2898.02,242.864C2859.06,242.864 2827.43,274.494 2827.43,313.454L2827.43,392.868C2827.43,431.828 2859.06,463.458 2898.02,463.458L2977.43,463.458C3016.39,463.458 3048.02,431.828 3048.02,392.868L3048.02,313.454ZM3032.02,313.454L3032.02,392.868C3032.02,422.997 3007.56,447.458 2977.43,447.458L2898.02,447.458C2867.89,447.458 2843.43,422.997 2843.43,392.868L2843.43,313.454C2843.43,283.325 2867.89,258.864 2898.02,258.864C2898.02,258.864 2977.43,258.864 2977.43,258.864C3007.56,258.864 3032.02,283.325 3032.02,313.454Z" style="fill:white;"/>
+                </g>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <linearGradient id="_Linear1" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(403.15,0,0,403.15,0.08,201.575)"><stop offset="0" style="stop-color:rgb(166,184,231);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(220,166,231);stop-opacity:1"/></linearGradient>
+        <radialGradient id="_Radial3" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(201.57,0,0,-201.57,201.57,203.725)"><stop offset="0" style="stop-color:rgb(29,29,27);stop-opacity:0.2"/><stop offset="1" style="stop-color:rgb(194,194,193);stop-opacity:0.2"/></radialGradient>
+    </defs>
+</svg>

@@ -1,7 +1,7 @@
 import "./styles/docs.scss"
 import "./styles/bootstrap.scss"
 
-import { App as AppIcon, Github } from "react-bootstrap-icons"
+import { Github } from "react-bootstrap-icons"
 import { getPhrase } from "./docs/shared"
 import { MenuItem } from "./docs/MenuItem"
 import { Button } from "./components/Button"
@@ -9,6 +9,7 @@ import { CSSProperties, useState } from "react"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import DemosPage from "./docs/pages/DemosPage"
 import PostsPage from "./docs/pages/PostsPage"
+import { Logo } from "./docs/Logo"
 
 function App() {
     const [customFont, setCustomFont] = useState<boolean>(true)
@@ -21,7 +22,7 @@ function App() {
             } as CSSProperties}>
                 <header className="container mx-3 d-flex align-items-center justify-content-between py-4">
                     <a href="/" className="d-inline-flex align-items-center" style={{ fontSize: "48px" }}>
-                        <AppIcon /> <h2 className="ms-1 mb-0">Blank</h2>
+                        <Logo /> <h5 className="ms-2 mb-0">Blank</h5>
                     </a>
 
                     <nav>
