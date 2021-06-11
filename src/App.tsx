@@ -6,7 +6,7 @@ import { getPhrase } from "./docs/shared"
 import { MenuItem } from "./docs/MenuItem"
 import { Button } from "./components/Button"
 import { CSSProperties, useState } from "react"
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
 import DemosPage from "./docs/pages/DemosPage"
 import PostsPage from "./docs/pages/PostsPage"
 import { Logo } from "./docs/Logo"
@@ -22,9 +22,9 @@ function App() {
                 "--font-family-base": `${customFont ? '"Inter", ' : ""}-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif`
             } as CSSProperties}>
                 <header className="container mx-3 d-md-flex align-items-center justify-content-between py-4">
-                    <a href="/" className="d-inline-flex align-items-center" style={{ fontSize: "48px" }}>
+                    <Link to="/" className="d-inline-flex align-items-center" style={{ fontSize: "48px" }}>
                         <Logo /> <h6 className="ms-2 mb-0">Blank</h6>
-                    </a>
+                    </Link>
 
                     <nav className="d-sm-flex align-items-center">
                         <MenuItem to="/">{getPhrase("Home")}</MenuItem>
@@ -45,7 +45,7 @@ function App() {
                     </Route>
                 </Switch>
 
-                <footer className="text-center">
+                <footer className="text-center py-3">
                     <a href="https://github.com/bruegmann/blank" target="_blank" rel="noopener noreferrer" className="d-inline-flex align-items-center">
                         <Github className="me-1" /> Code on GitHub
                     </a>

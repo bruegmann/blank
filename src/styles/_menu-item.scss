@@ -11,6 +11,10 @@
             border-top-right-radius: 999rem;
             animation: menu-item-border-appear .2s;
         }
+
+        &:hover {
+            color: inherit;
+        }
     }
 }
 

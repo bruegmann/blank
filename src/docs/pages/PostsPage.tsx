@@ -81,7 +81,7 @@ export default function PostsPage({ }: PostsPageProps) {
                             </div>
 
                             <div className="d-flex">
-                                <Button silent shadow={false} className="d-inline-flex align-items-center me-2" style={{ color: "red" }}><Heart className="me-1" /> {post.likes}</Button>
+                                <Button silent shadow={false} className="d-inline-flex align-items-center me-2"><Heart className="me-1" /> {post.likes}</Button>
                                 <Button shadow={false}>Reply</Button>
                             </div>
                         </header>
