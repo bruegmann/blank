@@ -1,12 +1,12 @@
 import "./styles/docs.scss"
 import "./styles/bootstrap.scss"
 
-import { Github } from "react-bootstrap-icons"
+import { Github, House, Newspaper } from "react-bootstrap-icons"
 import { getPhrase } from "./docs/shared"
-import { MenuItem } from "./docs/MenuItem"
 import { Button } from "./components/Button"
+import { MenuItem } from "./components/MenuItem"
 import { CSSProperties, useState } from "react"
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
+import { BrowserRouter as Router, Switch, Route, Link, NavLink } from "react-router-dom"
 import DemosPage from "./docs/pages/DemosPage"
 import PostsPage from "./docs/pages/PostsPage"
 import { Logo } from "./docs/Logo"
@@ -27,8 +27,9 @@ function App() {
                     </Link>
 
                     <nav className="d-sm-flex align-items-center">
-                        <MenuItem to="/">{getPhrase("Home")}</MenuItem>
-                        <MenuItem to="/posts">{getPhrase("Posts demo page")}</MenuItem>
+                        <MenuItem Component={NavLink} exact to="/" className="align-items-center"><House className="me-1" /> {getPhrase("Home")}</MenuItem>
+                        <MenuItem Component={NavLink} to="/posts" className="align-items-center"><Newspaper className="me-1" /> {getPhrase("Posts")}</MenuItem>
+                        <MenuItem href="https://bruegmann.github.io/blue-react" target="_blank" rel="noopener noreferrer">Blue React</MenuItem>
                         <Button onClick={toggleCustomFont} className="mx-3">Toggle font</Button>
                         <ThemeSwitch />
                     </nav>

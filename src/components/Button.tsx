@@ -8,7 +8,7 @@ export interface ButtonBaseProps {
     silent?: boolean
 }
 
-const buttonAttrShadow = { primary: undefined, shadow: undefined, silent: undefined }
+const attrShadow = { primary: undefined, shadow: undefined, silent: undefined }
 
 function getClassName(props: ButtonBaseProps) {
     const { primary, shadow, silent } = props
@@ -24,7 +24,7 @@ function getClassName(props: ButtonBaseProps) {
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>, ButtonBaseProps { }
 export function Button(props: ButtonProps) {
     return (
-        <button {...Object.assign({}, props, buttonAttrShadow) as unknown as ButtonHTMLAttributes<HTMLButtonElement>}
+        <button {...Object.assign({}, props, attrShadow) as unknown as ButtonHTMLAttributes<HTMLButtonElement>}
             className={getClassName(props)}
         >
             {props.children}
@@ -36,7 +36,7 @@ export function Button(props: ButtonProps) {
 export interface AnchorButtonProps extends AnchorHTMLAttributes<HTMLAnchorElement>, ButtonBaseProps { }
 export function AnchorButton(props: AnchorButtonProps) {
     return (
-        <a {...Object.assign({}, props, buttonAttrShadow) as unknown as AnchorHTMLAttributes<HTMLAnchorElement>}
+        <a {...Object.assign({}, props, attrShadow) as unknown as AnchorHTMLAttributes<HTMLAnchorElement>}
             className={getClassName(props)}
         >
             {props.children}

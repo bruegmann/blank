@@ -8,7 +8,7 @@ export interface FormControlBaseProps {
 }
 
 
-const formControlAttrShadow = {}
+const attrShadow = {}
 
 function getClassName(props: FormControlBaseProps) {
     const { shadow, silent } = props
@@ -24,7 +24,7 @@ export interface FormControlProps extends InputHTMLAttributes<HTMLInputElement>,
 export function FormControl(props: FormControlProps) {
     return (
         <input
-            {...Object.assign({}, props, formControlAttrShadow) as unknown as InputHTMLAttributes<HTMLInputElement>}
+            {...Object.assign({}, props, attrShadow) as unknown as InputHTMLAttributes<HTMLInputElement>}
             className={getClassName(props)}
         />
     )
@@ -34,7 +34,7 @@ export interface TextareaFormControlProps extends TextareaHTMLAttributes<HTMLTex
 export default function TextareaFormControl(props: TextareaFormControlProps) {
     return (
         <textarea
-            {...Object.assign({}, props, formControlAttrShadow) as unknown as TextareaHTMLAttributes<HTMLTextAreaElement>}
+            {...Object.assign({}, props, attrShadow) as unknown as TextareaHTMLAttributes<HTMLTextAreaElement>}
             className={getClassName(props)}
         />
     )

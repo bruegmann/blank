@@ -1,19 +1,31 @@
 .menu-item {
-    &.active {
-        position: relative;
-        &::after {
-            content: "";
-            position: absolute;
-            left: 0; right: 0; bottom: 0;
-            height: .25rem;
-            background-color: var(--control-bg-even-stronger);
-            border-top-left-radius: 999rem;
-            border-top-right-radius: 999rem;
-            animation: menu-item-border-appear .2s;
-        }
+    transition: all .2s;
 
-        &:hover {
-            color: inherit;
+    &:hover {
+        color: var(--active-color);
+        background-color: var(--control-bg);
+    }
+
+    &.active {
+        // position: relative;
+        // &::after {
+        //     content: "";
+        //     position: absolute;
+        //     left: 0; right: 0; bottom: 0;
+        //     height: .25rem;
+        //     background-color: var(--control-bg-even-stronger);
+        //     border-top-left-radius: 999rem;
+        //     border-top-right-radius: 999rem;
+        //     animation: menu-item-border-appear .2s;
+        // }
+
+        // background-color: var(--control-bg);
+        
+        // border-bottom: .25rem solid var(--control-bg-stronger);
+
+        &, &:hover {
+            color: var(--front-color);
+            background-color: transparent;
         }
     }
 }
