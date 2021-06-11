@@ -31,7 +31,7 @@ export function FormControl(props: FormControlProps) {
 }
 
 export interface TextareaFormControlProps extends TextareaHTMLAttributes<HTMLTextAreaElement>, FormControlBaseProps { }
-export default function TextareaFormControl(props: TextareaFormControlProps) {
+export function TextareaFormControl(props: TextareaFormControlProps) {
     return (
         <textarea
             {...Object.assign({}, props, attrShadow) as unknown as TextareaHTMLAttributes<HTMLTextAreaElement>}

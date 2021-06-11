@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Button } from "../components/Button"
-import TextareaFormControl, { FormControl } from "../components/FormControl"
+import { FormControl, TextareaFormControl } from "../components/FormControl"
 
 export interface ExampleFormControlProps {
 
