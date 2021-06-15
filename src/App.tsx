@@ -1,5 +1,4 @@
-import "./styles/docs.scss"
-import "./styles/bootstrap.scss"
+import "./docs/docs.scss"
 
 import { Github, House, Newspaper } from "react-bootstrap-icons"
 import { getPhrase } from "./docs/shared"
