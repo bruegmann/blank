@@ -1,45 +1,22 @@
 import clsx from "clsx";
-import { AnchorHTMLAttributes, ButtonHTMLAttributes } from "react";
+import { AnchorHTMLAttributes, ElementType } from "react";
 
-export interface ButtonBaseProps {
-    className?: string
+export interface ButtonProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
+    [key: string]: any
+    tag?: ElementType
     primary?: boolean
     shadow?: boolean | "sm"
     silent?: boolean
 }
 
-const attrShadow = { primary: undefined, shadow: undefined, silent: undefined }
-
-function getClassName(props: ButtonBaseProps) {
-    const { primary, shadow, silent } = props
-
-    return clsx("btn px-3 py-2 rounded", {
-        primary,
-        "neumorphism-shadow-sm": shadow === "sm" || shadow === undefined,
-        "neumorphism-shadow": shadow === true,
-        silent
-    }, props.className)
-}
-
-export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>, ButtonBaseProps { }
-export function Button(props: ButtonProps) {
+export function Button({ tag, primary, shadow, silent, ...rest }: ButtonProps) {
+    let Tag = tag || (rest.href ? "a" : "button")
     return (
-        <button {...Object.assign({}, props, attrShadow) as unknown as ButtonHTMLAttributes<HTMLButtonElement>}
-            className={getClassName(props)}
-        >
-            {props.children}
-        </button>
-    )
-}
-
-
-export interface AnchorButtonProps extends AnchorHTMLAttributes<HTMLAnchorElement>, ButtonBaseProps { }
-export function AnchorButton(props: AnchorButtonProps) {
-    return (
-        <a {...Object.assign({}, props, attrShadow) as unknown as AnchorHTMLAttributes<HTMLAnchorElement>}
-            className={getClassName(props)}
-        >
-            {props.children}
-        </a>
+        <Tag {...rest} className={clsx("btn px-3 py-2 rounded", {
+            primary,
+            "neumorphism-shadow-sm": shadow === "sm" || shadow === undefined,
+            "neumorphism-shadow": shadow === true,
+            silent
+        }, rest.className)} />
     )
 }

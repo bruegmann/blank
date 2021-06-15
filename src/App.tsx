@@ -27,9 +27,12 @@ function App() {
                     </Link>
 
                     <nav className="d-sm-flex align-items-center">
-                        <MenuItem Component={NavLink} exact to="/" className="align-items-center"><House className="me-1" /> {getPhrase("Home")}</MenuItem>
-                        <MenuItem Component={NavLink} to="/posts" className="align-items-center"><Newspaper className="me-1" /> {getPhrase("Posts")}</MenuItem>
+                        <MenuItem tag={NavLink} exact to="/" className="align-items-center"><House className="me-1" /> {getPhrase("Home")}</MenuItem>
+                        <MenuItem tag={NavLink} to="/posts" className="align-items-center"><Newspaper className="me-1" /> {getPhrase("Posts")}</MenuItem>
                         <MenuItem href="https://bruegmann.github.io/blue-react" target="_blank" rel="noopener noreferrer">Blue React</MenuItem>
+
+                        <MenuItem onClick={() => alert("Hi!")} className="me-1">Click me !</MenuItem>
+
                         <Button onClick={toggleCustomFont} className="mx-3">Toggle font</Button>
                         <ThemeSwitch />
                     </nav>

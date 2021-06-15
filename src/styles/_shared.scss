@@ -12,3 +12,10 @@
         }
     }
 }
+
+.btn, .menu-item {
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1.5;
+}
