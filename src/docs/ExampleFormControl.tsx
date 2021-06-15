@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Button } from "../components/Button"
-import { FormControl, TextareaFormControl } from "../components/FormControl"
+import { FormControl } from "../components/FormControl"
 
 export interface ExampleFormControlProps {
 
@@ -19,7 +19,7 @@ export default function ExampleFormControl({ }: ExampleFormControlProps) {
 
             <label className="d-block mb-5">
                 <div className="mb-1 position-relative"><strong>Write something</strong></div>
-                <TextareaFormControl value={text} onChange={({ target }) => setText(target.value)} className="d-block w-100" />
+                <FormControl tag="textarea" value={text} onChange={({ target }) => setText(target.value)} className="d-block w-100" />
             </label>
 
             <label className="d-block mb-5 form-control p-0 neumorphism-shadow-sm rounded">
