@@ -11,6 +11,8 @@ var _clsx = _interopRequireDefault(require("clsx"));
 
 var _react = require("react");
 
+var _jsxRuntime = require("react/jsx-runtime");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
@@ -53,28 +55,34 @@ function Modal(props) {
       setShow(props.show);
     }
   }, [props.show]);
-  return /*#__PURE__*/React.createElement("div", {
+  return /*#__PURE__*/(0, _jsxRuntime.jsxs)("div", {
     className: (0, _clsx.default)("modal", {
       show: show,
       fadeOut: fadeOut
     }),
     role: "dialog",
-    tabIndex: -1
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "modal-backdrop",
-    onClick: toggle
-  }), /*#__PURE__*/React.createElement("div", {
-    className: "modal-content",
-    role: "document"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "modal-header d-flex justify-content-between mt-3 mb-2"
-  }, /*#__PURE__*/React.createElement("h2", {
-    className: "m-0"
-  }, title), /*#__PURE__*/React.createElement("button", {
-    className: "btn-close",
-    onClick: toggle,
-    "aria-label": "Close"
-  }, /*#__PURE__*/React.createElement(_reactBootstrapIcons.X, null))), /*#__PURE__*/React.createElement("div", {
-    className: (0, _clsx.default)("modal-body body-bg-stronger p-3 rounded", classNames === null || classNames === void 0 ? void 0 : classNames.modalBody)
-  }, children)));
+    tabIndex: -1,
+    children: [/*#__PURE__*/(0, _jsxRuntime.jsx)("div", {
+      className: "modal-backdrop",
+      onClick: toggle
+    }), /*#__PURE__*/(0, _jsxRuntime.jsxs)("div", {
+      className: "modal-content",
+      role: "document",
+      children: [/*#__PURE__*/(0, _jsxRuntime.jsxs)("div", {
+        className: "modal-header d-flex justify-content-between mt-3 mb-2",
+        children: [/*#__PURE__*/(0, _jsxRuntime.jsx)("h2", {
+          className: "m-0",
+          children: title
+        }), /*#__PURE__*/(0, _jsxRuntime.jsx)("button", {
+          className: "btn-close",
+          onClick: toggle,
+          "aria-label": "Close",
+          children: /*#__PURE__*/(0, _jsxRuntime.jsx)(_reactBootstrapIcons.X, {})
+        })]
+      }), /*#__PURE__*/(0, _jsxRuntime.jsx)("div", {
+        className: (0, _clsx.default)("modal-body body-bg-stronger p-3 rounded", classNames === null || classNames === void 0 ? void 0 : classNames.modalBody),
+        children: children
+      })]
+    })]
+  });
 }
