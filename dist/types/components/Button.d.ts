@@ -1,13 +1,9 @@
-import { AnchorHTMLAttributes, ButtonHTMLAttributes } from "react";
-export interface ButtonBaseProps {
-    className?: string;
+import { AnchorHTMLAttributes, ElementType } from "react";
+export interface ButtonProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
+    [key: string]: any;
+    tag?: ElementType;
     primary?: boolean;
     shadow?: boolean | "sm";
     silent?: boolean;
 }
-export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>, ButtonBaseProps {
-}
-export declare function Button(props: ButtonProps): JSX.Element;
-export interface AnchorButtonProps extends AnchorHTMLAttributes<HTMLAnchorElement>, ButtonBaseProps {
-}
-export declare function AnchorButton(props: AnchorButtonProps): JSX.Element;
+export declare function Button({ tag, primary, shadow, silent, ...rest }: ButtonProps): JSX.Element;

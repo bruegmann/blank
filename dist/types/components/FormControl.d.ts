@@ -1,12 +1,8 @@
-import { InputHTMLAttributes, TextareaHTMLAttributes } from "react";
-export interface FormControlBaseProps {
-    className?: string;
+import { ElementType, InputHTMLAttributes } from "react";
+export interface FormControlProps extends InputHTMLAttributes<HTMLInputElement> {
+    [key: string]: any;
+    tag?: ElementType;
     shadow?: boolean | "sm";
     silent?: boolean;
 }
-export interface FormControlProps extends InputHTMLAttributes<HTMLInputElement>, FormControlBaseProps {
-}
-export declare function FormControl(props: FormControlProps): JSX.Element;
-export interface TextareaFormControlProps extends TextareaHTMLAttributes<HTMLTextAreaElement>, FormControlBaseProps {
-}
-export declare function TextareaFormControl(props: TextareaFormControlProps): JSX.Element;
+export declare function FormControl({ tag, shadow, silent, ...rest }: FormControlProps): JSX.Element;
