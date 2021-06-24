@@ -55,12 +55,13 @@ export default function CssVariables({ }: CssVariablesProps) {
         <>
             <h2 className="mt-3">CSS variables</h2>
 
+            <div><code>:root {`{`}</code></div>
             {cssVariables.map((cssVar: string) =>
-                <div key={cssVar} className="d-flex py-1 gap-2">
-                    <div><code><strong>{cssVar}</strong>:</code></div>
-                    <div><code>{getComputedStyle(document.documentElement).getPropertyValue(cssVar)}</code></div>
+                <div key={cssVar} className="ms-3">
+                    <code><strong>{cssVar}</strong>: {getComputedStyle(document.documentElement).getPropertyValue(cssVar)}</code>
                 </div>
             )}
+            <div><code>{`}`}</code></div>
         </>
     )
 }

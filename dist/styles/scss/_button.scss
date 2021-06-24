@@ -4,12 +4,12 @@
     transition: background-color .2s;
 
     &:not(.no-hover):hover {
-        background-color: var(--secondary-hover);
+        background-color: var(--control-bg-even-stronger);
         color: var(--body-bg);
     }
 
     &.primary {
-        background-color: hsl(var(--primary));
+        background-color: hsl(var(--primary-tone));
         color: var(--body-bg);
 
         &:not(.no-hover):hover {
