@@ -2,83 +2,118 @@
 * Blank v0.1.0 (https://bruegmann.github.io/blank/)
 * Licensed under GNU (https://github.com/bruegmann/blank/blob/main/LICENSE)
 */
-body {
-  --body-bg: #f4f4f4;
-  --body-bg-stronger: #fff;
-  --control-bg: rgba(25, 25, 25, 0.05);
-  --control-bg-stronger: rgba(25, 25, 25, 0.1);
-  --control-bg-even-stronger: rgba(25, 25, 25, 0.7);
-  --body-color: rgba(25, 25, 25, 0.8);
-  --front-color: #191919;
-  --active-color: #3f3f3f;
-  --primary-hover: #076d7f;
-  --neumorphism-shadow-color: #e5e5e5;
-  --neumorphism-light-color: white;
-  --modal-backdrop-bg-tone: 21, 29, 34;
-  --modal-header-color: white;
+:root {
+  --body-bg-tone: 0deg, 0%, 95.6862745098%;
+  --body-bg: hsl(var(--body-bg-tone));
+  --body-bg-stronger-tone: 0deg, 0%, 100%;
+  --body-bg-stronger: hsl(var(--body-bg-stronger-tone));
+  --control-bg-tone: 0deg, 0%, 9.8039215686%;
+  --control-bg: hsla(var(--control-bg-tone), .05);
+  --control-bg-stronger: hsla(var(--control-bg-tone), .1);
+  --control-bg-even-stronger: hsla(var(--control-bg-tone), .7);
+  --body-color-tone: 0deg, 0%, 9.8039215686%;
+  --body-color: hsla(var(--body-color-tone), .8);
+  --front-color: hsl(var(--body-color-tone));
+  --active-color-tone: 0deg, 0%, 24.7058823529%;
+  --front-color: hsl(var(--active-color-tone));
+  --primary-tone: 194.1666666667deg, 63.7168141593%, 44.3137254902%;
+  --primary-hover-tone: 189deg, 89.552238806%, 26.2745098039%;
+  --primary-hover: hsl(var(--primary-hover-tone));
+  --neumorphism-shadow-color-tone: 0deg, 0%, 89.8039215686%;
+  --neumorphism-shadow-color: hsl(var(--neumorphism-shadow-color-tone));
+  --neumorphism-light-color-tone: 0deg, 0%, 100%;
+  --neumorphism-light-color: hsl(var(--neumorphism-light-color-tone));
+  --modal-backdrop-bg-tone: 203.0769230769deg, 23.6363636364%, 10.7843137255%;
+  --modal-header-color-tone: 0deg, 0%, 100%;
   --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  --primary: 194.1666666667deg, 63.7168141593%, 44.3137254902%;
-  --secondary-normal: var(--body-bg-stronger);
-  --secondary-hover: var(--control-bg-even-stronger);
 }
-body .body-bg-stronger * {
-  --neumorphism-shadow-color: rgba(229, 229, 229, 0.5);
+:root .body-bg-stronger * {
+  --neumorphism-shadow-color: hsla(var(--neumorphism-shadow-color-tone), .5);
 }
 @media (prefers-color-scheme: dark) {
-  body {
-    --body-bg: #151d22;
-    --body-bg-stronger: #1f2b33;
-    --control-bg: rgba(255, 255, 255, 0.15);
-    --control-bg-stronger: rgba(255, 255, 255, 0.3);
-    --control-bg-even-stronger: rgba(255, 255, 255, 0.8);
-    --body-color: rgba(255, 255, 255, 0.8);
-    --front-color: #ffffff;
+  :root {
+    --body-bg-tone: 203.0769230769deg, 23.6363636364%, 10.7843137255%;
+    --body-bg: hsl(var(--body-bg-tone));
+    --body-bg-stronger-tone: 204deg, 24.3902439024%, 16.0784313725%;
+    --body-bg-stronger: hsl(var(--body-bg-stronger-tone));
+    --control-bg-tone: 0deg, 0%, 100%;
+    --control-bg: hsla(var(--control-bg-tone), .15);
+    --control-bg-stronger: hsla(var(--control-bg-tone), .3);
+    --control-bg-even-stronger: hsla(var(--control-bg-tone), .8);
+    --body-color-tone: 0deg, 0%, 100%;
+    --body-color: hsla(var(--body-color-tone), .8);
+    --front-color: hsl(var(--body-color-tone));
     --active-color: rgba(255, 255, 255, 0.9);
-    --primary-hover: #34acdb;
-    --neumorphism-shadow-color: #090d0f;
-    --neumorphism-light-color: #1f2a32;
-    --modal-backdrop-bg-tone: 15, 20, 24;
-    --modal-header-color: white;
+    --active-color-tone: var(--body-color-tone);
+    --front-color: hsla(var(--active-color-tone), .9);
+    --primary-tone: 194.1666666667deg, 63.7168141593%, 44.3137254902%;
+    --primary-hover-tone: 196.8862275449deg, 69.8744769874%, 53.137254902%;
+    --primary-hover: hsl(var(--primary-hover-tone));
+    --neumorphism-shadow-color-tone: 200deg, 25%, 4.7058823529%;
+    --neumorphism-shadow-color: hsl(var(--neumorphism-shadow-color-tone));
+    --neumorphism-light-color-tone: 205.2631578947deg, 23.4567901235%, 15.8823529412%;
+    --neumorphism-light-color: hsl(var(--neumorphism-light-color-tone));
+    --modal-backdrop-bg-tone: 206.6666666667deg, 23.0769230769%, 7.6470588235%;
+    --modal-header-color-tone: 0deg, 0%, 100%;
   }
-  body .body-bg-stronger * {
-    --neumorphism-shadow-color: rgba(9, 13, 15, 0.5);
+  :root .body-bg-stronger * {
+    --neumorphism-shadow-color: hsla(var(--neumorphism-shadow-color-tone), .5);
   }
 }
-body.light {
-  --body-bg: #f4f4f4;
-  --body-bg-stronger: #fff;
-  --control-bg: rgba(25, 25, 25, 0.05);
-  --control-bg-stronger: rgba(25, 25, 25, 0.1);
-  --control-bg-even-stronger: rgba(25, 25, 25, 0.7);
-  --body-color: rgba(25, 25, 25, 0.8);
-  --front-color: #191919;
-  --active-color: #3f3f3f;
-  --primary-hover: #076d7f;
-  --neumorphism-shadow-color: #e5e5e5;
-  --neumorphism-light-color: white;
-  --modal-backdrop-bg-tone: 21, 29, 34;
-  --modal-header-color: white;
+:root.light {
+  --body-bg-tone: 0deg, 0%, 95.6862745098%;
+  --body-bg: hsl(var(--body-bg-tone));
+  --body-bg-stronger-tone: 0deg, 0%, 100%;
+  --body-bg-stronger: hsl(var(--body-bg-stronger-tone));
+  --control-bg-tone: 0deg, 0%, 9.8039215686%;
+  --control-bg: hsla(var(--control-bg-tone), .05);
+  --control-bg-stronger: hsla(var(--control-bg-tone), .1);
+  --control-bg-even-stronger: hsla(var(--control-bg-tone), .7);
+  --body-color-tone: 0deg, 0%, 9.8039215686%;
+  --body-color: hsla(var(--body-color-tone), .8);
+  --front-color: hsl(var(--body-color-tone));
+  --active-color-tone: 0deg, 0%, 24.7058823529%;
+  --front-color: hsl(var(--active-color-tone));
+  --primary-tone: 194.1666666667deg, 63.7168141593%, 44.3137254902%;
+  --primary-hover-tone: 189deg, 89.552238806%, 26.2745098039%;
+  --primary-hover: hsl(var(--primary-hover-tone));
+  --neumorphism-shadow-color-tone: 0deg, 0%, 89.8039215686%;
+  --neumorphism-shadow-color: hsl(var(--neumorphism-shadow-color-tone));
+  --neumorphism-light-color-tone: 0deg, 0%, 100%;
+  --neumorphism-light-color: hsl(var(--neumorphism-light-color-tone));
+  --modal-backdrop-bg-tone: 203.0769230769deg, 23.6363636364%, 10.7843137255%;
+  --modal-header-color-tone: 0deg, 0%, 100%;
 }
-body.light .body-bg-stronger * {
-  --neumorphism-shadow-color: rgba(229, 229, 229, 0.5);
+:root.light .body-bg-stronger * {
+  --neumorphism-shadow-color: hsla(var(--neumorphism-shadow-color-tone), .5);
 }
-body.dark {
-  --body-bg: #151d22;
-  --body-bg-stronger: #1f2b33;
-  --control-bg: rgba(255, 255, 255, 0.15);
-  --control-bg-stronger: rgba(255, 255, 255, 0.3);
-  --control-bg-even-stronger: rgba(255, 255, 255, 0.8);
-  --body-color: rgba(255, 255, 255, 0.8);
-  --front-color: #ffffff;
+:root.dark {
+  --body-bg-tone: 203.0769230769deg, 23.6363636364%, 10.7843137255%;
+  --body-bg: hsl(var(--body-bg-tone));
+  --body-bg-stronger-tone: 204deg, 24.3902439024%, 16.0784313725%;
+  --body-bg-stronger: hsl(var(--body-bg-stronger-tone));
+  --control-bg-tone: 0deg, 0%, 100%;
+  --control-bg: hsla(var(--control-bg-tone), .15);
+  --control-bg-stronger: hsla(var(--control-bg-tone), .3);
+  --control-bg-even-stronger: hsla(var(--control-bg-tone), .8);
+  --body-color-tone: 0deg, 0%, 100%;
+  --body-color: hsla(var(--body-color-tone), .8);
+  --front-color: hsl(var(--body-color-tone));
   --active-color: rgba(255, 255, 255, 0.9);
-  --primary-hover: #34acdb;
-  --neumorphism-shadow-color: #090d0f;
-  --neumorphism-light-color: #1f2a32;
-  --modal-backdrop-bg-tone: 15, 20, 24;
-  --modal-header-color: white;
+  --active-color-tone: var(--body-color-tone);
+  --front-color: hsla(var(--active-color-tone), .9);
+  --primary-tone: 194.1666666667deg, 63.7168141593%, 44.3137254902%;
+  --primary-hover-tone: 196.8862275449deg, 69.8744769874%, 53.137254902%;
+  --primary-hover: hsl(var(--primary-hover-tone));
+  --neumorphism-shadow-color-tone: 200deg, 25%, 4.7058823529%;
+  --neumorphism-shadow-color: hsl(var(--neumorphism-shadow-color-tone));
+  --neumorphism-light-color-tone: 205.2631578947deg, 23.4567901235%, 15.8823529412%;
+  --neumorphism-light-color: hsl(var(--neumorphism-light-color-tone));
+  --modal-backdrop-bg-tone: 206.6666666667deg, 23.0769230769%, 7.6470588235%;
+  --modal-header-color-tone: 0deg, 0%, 100%;
 }
-body.dark .body-bg-stronger * {
-  --neumorphism-shadow-color: rgba(9, 13, 15, 0.5);
+:root.dark .body-bg-stronger * {
+  --neumorphism-shadow-color: hsla(var(--neumorphism-shadow-color-tone), .5);
 }
 
 window {
@@ -99,7 +134,7 @@ body {
   font-family: var(--font-family-base);
   line-height: 1.5;
   margin: 0;
-  background-color: var(--body-bg);
+  background-color: hsl(var(--body-bg-tone));
   color: var(--body-color);
 }
 
@@ -164,22 +199,22 @@ a {
   color: var(--front-color);
   transition: background-color 0.2s;
 }
-.btn:hover {
-  background-color: var(--secondary-hover);
-  color: var(--body-bg);
+.btn:not(.no-hover):hover {
+  background-color: var(--control-bg-even-stronger);
+  color: hsl(var(--body-bg-tone));
 }
 .btn.primary {
   background-color: hsl(var(--primary-tone));
-  color: var(--body-bg);
+  color: hsl(var(--body-bg-tone));
 }
-.btn.primary:hover {
+.btn.primary:not(.no-hover):hover {
   background-color: var(--primary-hover);
-  color: var(--body-bg);
+  color: hsl(var(--body-bg-tone));
 }
 .btn.silent {
   background-color: transparent;
 }
-.btn.silent:hover {
+.btn.silent:not(.no-hover):hover {
   background-color: var(--control-bg-stronger);
   color: var(--front-color);
 }
@@ -194,7 +229,7 @@ a {
   opacity: 0.5;
   background-color: transparent;
 }
-.btn-close:hover {
+.btn-close:not(.no-hover):hover {
   opacity: 1;
 }
 
@@ -268,7 +303,7 @@ textarea.form-control, textarea.form-control-input {
   }
 }
 .modal-header, .modal-header > * {
-  color: var(--modal-header-color);
+  color: hsl(var(--modal-header-color-tone));
 }
 
 .modal-content {
@@ -314,9 +349,9 @@ textarea.form-control, textarea.form-control-input {
 }
 
 .body-bg {
-  background-color: var(--body-bg);
+  background-color: hsl(var(--body-bg-tone));
 }
 
 .body-bg-stronger {
-  background-color: var(--body-bg-stronger);
+  background-color: hsl(var(--body-bg-stronger-tone));
 }

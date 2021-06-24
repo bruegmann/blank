@@ -5,16 +5,16 @@
 
     &:not(.no-hover):hover {
         background-color: var(--control-bg-even-stronger);
-        color: var(--body-bg);
+        color: hsl(var(--body-bg-tone));
     }
 
     &.primary {
         background-color: hsl(var(--primary-tone));
-        color: var(--body-bg);
+        color: hsl(var(--body-bg-tone));
 
         &:not(.no-hover):hover {
             background-color: var(--primary-hover);
-            color: var(--body-bg);
+            color: hsl(var(--body-bg-tone));
         }
     }
 

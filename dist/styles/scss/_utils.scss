@@ -7,9 +7,9 @@
 }
 
 .body-bg {
-    background-color: var(--body-bg);
+    background-color: hsl(var(--body-bg-tone));
 }
 
 .body-bg-stronger {
-    background-color: var(--body-bg-stronger);
+    background-color: hsl(var(--body-bg-stronger-tone));
 } 

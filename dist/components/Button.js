@@ -9,7 +9,7 @@ var _clsx = _interopRequireDefault(require("clsx"));
 
 var _jsxRuntime = require("react/jsx-runtime");
 
-var _excluded = ["tag", "primary", "shadow", "silent"];
+var _excluded = ["tag", "primary", "shadow", "silent", "noHover"];
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28,6 +28,7 @@ function Button(_ref) {
       primary = _ref.primary,
       shadow = _ref.shadow,
       silent = _ref.silent,
+      noHover = _ref.noHover,
       rest = _objectWithoutProperties(_ref, _excluded);
 
   var Tag = tag || (rest.href ? "a" : "button");
@@ -36,7 +37,8 @@ function Button(_ref) {
       primary: primary,
       "neumorphism-shadow-sm": shadow === "sm" || shadow === undefined,
       "neumorphism-shadow": shadow === true,
-      silent: silent
+      silent: silent,
+      "no-hover": noHover
     }, rest.className)
   }));
 }

@@ -5,5 +5,6 @@ export interface ButtonProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
     primary?: boolean;
     shadow?: boolean | "sm";
     silent?: boolean;
+    noHover?: boolean;
 }
-export declare function Button({ tag, primary, shadow, silent, ...rest }: ButtonProps): JSX.Element;
+export declare function Button({ tag, primary, shadow, silent, noHover, ...rest }: ButtonProps): JSX.Element;
