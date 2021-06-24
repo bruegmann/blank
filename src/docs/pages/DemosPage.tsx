@@ -2,6 +2,8 @@ import { ThemeSwitch } from "../ThemeSwitch"
 import { Button } from "../../components/Button"
 import ExampleModal from "../ExampleModal"
 import ExampleFormControl from "../ExampleFormControl"
+import { useEffect, useState } from "react"
+import CssVariables from "../CssVariables"
 
 export interface DemosPageProps {
 
@@ -40,6 +42,8 @@ export default function DemosPage({ }: DemosPageProps) {
             </div>
 
             <ExampleModal />
+
+            <CssVariables />
         </div>
     )
 }

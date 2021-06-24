@@ -1,14 +1,14 @@
 .btn, .form-control {
     &:focus, &:focus-within {
         outline: none;
-        box-shadow: 0 0 0 .2rem hsla(var(--primary), .25);
+        box-shadow: 0 0 0 .2rem hsla(var(--primary-tone), .25);
 
         &.neumorphism-shadow {
-            box-shadow: 0 0 0 .2rem hsla(var(--primary), .25), $neumorphism-shadow-box-shadow;
+            box-shadow: 0 0 0 .2rem hsla(var(--primary-tone), .25), $neumorphism-shadow-box-shadow;
         }
 
         &.neumorphism-shadow-sm {
-            box-shadow: 0 0 0 .2rem hsla(var(--primary), .25), $neumorphism-shadow-box-shadow-sm;
+            box-shadow: 0 0 0 .2rem hsla(var(--primary-tone), .25), $neumorphism-shadow-box-shadow-sm;
         }
     }
 }
