@@ -3,7 +3,7 @@
     color: var(--front-color);
     transition: background-color .2s;
 
-    &:hover {
+    &:not(.no-hover):hover {
         background-color: var(--secondary-hover);
         color: var(--body-bg);
     }
@@ -12,7 +12,7 @@
         background-color: hsl(var(--primary));
         color: var(--body-bg);
 
-        &:hover {
+        &:not(.no-hover):hover {
             background-color: var(--primary-hover);
             color: var(--body-bg);
         }
@@ -21,7 +21,7 @@
     &.silent {
         background-color: transparent;
 
-        &:hover {
+        &:not(.no-hover):hover {
             background-color: var(--control-bg-stronger);
             color: var(--front-color);
         }
@@ -38,7 +38,7 @@
     opacity: .5;
     background-color: transparent;
 
-    &:hover {
+    &:not(.no-hover):hover {
         opacity: 1;
     }
 }

@@ -12,7 +12,7 @@ import { Logo } from "./docs/Logo"
 import { ThemeSwitch } from "./docs/ThemeSwitch"
 
 function App() {
-    const [customFont, setCustomFont] = useState<boolean>(true)
+    const [customFont, setCustomFont] = useState<boolean>(false)
     const toggleCustomFont = () => setCustomFont(!customFont)
 
     return (

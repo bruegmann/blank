@@ -7,16 +7,18 @@ export interface ButtonProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
     primary?: boolean
     shadow?: boolean | "sm"
     silent?: boolean
+    noHover?: boolean
 }
 
-export function Button({ tag, primary, shadow, silent, ...rest }: ButtonProps) {
+export function Button({ tag, primary, shadow, silent, noHover, ...rest }: ButtonProps) {
     let Tag = tag || (rest.href ? "a" : "button")
     return (
         <Tag {...rest} className={clsx("btn px-3 py-2 rounded", {
             primary,
             "neumorphism-shadow-sm": shadow === "sm" || shadow === undefined,
             "neumorphism-shadow": shadow === true,
-            silent
+            silent,
+            "no-hover": noHover
         }, rest.className)} />
     )
 }

@@ -23,7 +23,8 @@ export default function DemosPage({ }: DemosPageProps) {
                 <Button primary className="me-3" href="https://google.com" target="_blank" rel="noopener noreferrer">Open link</Button>
                 <Button silent className="me-3">Silent button</Button>
                 <Button silent shadow={false} className="me-3">Silent button without shadow</Button>
-                <Button shadow={false}>Button without shadow</Button>
+                <Button shadow={false} className="me-3">Button without shadow</Button>
+                <Button noHover>Button with no hover for active state</Button>
             </div>
 
             <ExampleFormControl />
