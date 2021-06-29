@@ -3,9 +3,9 @@ import { ElementType, InputHTMLAttributes } from "react";
 
 export interface FormControlProps extends InputHTMLAttributes<HTMLInputElement> {
     [key: string]: any
-    tag?: ElementType
     shadow?: boolean | "sm"
     silent?: boolean
+    tag?: ElementType
 }
 
 export function FormControl({ tag, shadow, silent, ...rest }: FormControlProps) {

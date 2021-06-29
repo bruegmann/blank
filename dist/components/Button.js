@@ -9,7 +9,7 @@ var _clsx = _interopRequireDefault(require("clsx"));
 
 var _jsxRuntime = require("react/jsx-runtime");
 
-var _excluded = ["tag", "primary", "shadow", "silent", "noHover"];
+var _excluded = ["tag", "primary", "shadow", "silent", "noHover", "spacing"];
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -29,11 +29,13 @@ function Button(_ref) {
       shadow = _ref.shadow,
       silent = _ref.silent,
       noHover = _ref.noHover,
+      _ref$spacing = _ref.spacing,
+      spacing = _ref$spacing === void 0 ? "px-3 py-2" : _ref$spacing,
       rest = _objectWithoutProperties(_ref, _excluded);
 
   var Tag = tag || (rest.href ? "a" : "button");
   return /*#__PURE__*/(0, _jsxRuntime.jsx)(Tag, _objectSpread(_objectSpread({}, rest), {}, {
-    className: (0, _clsx.default)("btn px-3 py-2 rounded", {
+    className: (0, _clsx.default)("btn ".concat(spacing, " rounded"), {
       primary: primary,
       "neumorphism-shadow-sm": shadow === "sm" || shadow === undefined,
       "neumorphism-shadow": shadow === true,

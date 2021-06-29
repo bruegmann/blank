@@ -19,6 +19,7 @@
     "@types/react-router-dom": "^5.1.7",
     "gh-pages": "^3.2.0",
     "react": "^17.0.2",
+    "react-docgen": "^5.4.0",
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
@@ -35,7 +36,8 @@
     "build:types": "tsc --declaration --emitDeclarationOnly --declarationDir ./dist/types --noEmit false",
     "build:dist": "babel ./src/components --out-dir ./dist/components --extensions \".tsx,.js\"",
     "build:css": "node build-css.js",
-    "build:all": "npm run build:types && npm run build:dist && npm run build:css"
+    "build:docgen": "react-docgen ./src/components/ -o ./src/docs/data/docs.json --extension tsx",
+    "build:all": "npm run build:types && npm run build:dist && npm run build:css && build:docgen"
   },
   "eslintConfig": {
     "extends": "react-app"

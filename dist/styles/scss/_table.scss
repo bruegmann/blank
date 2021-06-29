@@ -1,0 +1,32 @@
+th {
+    text-align: inherit;
+    text-align: -webkit-match-parent;
+}
+
+.table-bordered {
+    &, td, th {
+        border: 1px solid var(--control-bg-stronger);
+    }
+
+    thead {
+        td, th {
+            border-bottom-width: 2px;
+        }
+    }
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+
+    thead th {
+        vertical-align: bottom;
+        border-bottom: 2px solid var(--control-bg-stronger);
+    }
+
+    td, th {
+        padding: .75rem;
+        vertical-align: top;
+        border-top: 1px solid var(--control-bg-stronger);
+    }
+}

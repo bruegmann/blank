@@ -1,6 +1,6 @@
 import "./docs/docs.scss"
 
-import { Github, House, Newspaper } from "react-bootstrap-icons"
+import { Github, House, Newspaper, Puzzle } from "react-bootstrap-icons"
 import { getPhrase } from "./docs/shared"
 import { Button } from "./components/Button"
 import { MenuItem } from "./components/MenuItem"
@@ -10,6 +10,7 @@ import DemosPage from "./docs/pages/DemosPage"
 import PostsPage from "./docs/pages/PostsPage"
 import { Logo } from "./docs/Logo"
 import { ThemeSwitch } from "./docs/ThemeSwitch"
+import ComponentsPage from "./docs/pages/ComponentsPage"
 
 function App() {
     const [customFont, setCustomFont] = useState<boolean>(false)
@@ -27,12 +28,11 @@ function App() {
 
                     <nav className="d-sm-flex align-items-center">
                         <MenuItem tag={NavLink} exact to="/" className="align-items-center"><House className="me-1" /> {getPhrase("Home")}</MenuItem>
+                        <MenuItem tag={NavLink} to="/components" className="align-items-center"><Puzzle className="me-1" /> {getPhrase("Components")}</MenuItem>
                         <MenuItem tag={NavLink} to="/posts" className="align-items-center"><Newspaper className="me-1" /> {getPhrase("Posts")}</MenuItem>
                         <MenuItem href="https://bruegmann.github.io/blue-react" target="_blank" rel="noopener noreferrer">Blue React</MenuItem>
 
                         <MenuItem onClick={() => alert("Hi!")} className="me-1">Click me !</MenuItem>
-
-                        <Button onClick={toggleCustomFont} className="mx-3">Toggle font</Button>
                         <ThemeSwitch />
                     </nav>
                 </header>
@@ -42,6 +42,9 @@ function App() {
                 <Switch>
                     <Route path="/posts">
                         <PostsPage />
+                    </Route>
+                    <Route path="/components">
+                        <ComponentsPage />
                     </Route>
                     <Route exact path="/">
                         <DemosPage />

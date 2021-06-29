@@ -22,3 +22,26 @@ export function getPhrase(keyword: string, countryCode: string | undefined = und
         return keyword
     }
 }
+
+export interface DocumentedComponentTsType {
+    name: string
+    elements?: DocumentedComponentTsType[]
+    raw?: string
+}
+
+export interface DocumentedComponentProps {
+    description: string
+    required: boolean
+    tsType: DocumentedComponentTsType
+    defaultValue?: {
+        computed: boolean
+        value: string
+    }
+}
+
+export interface DocumentedComponent {
+    displayName: string
+    description: string
+    props: { [key: string]: DocumentedComponentProps }
+    exampleCode?: string
+}
