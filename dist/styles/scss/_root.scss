@@ -6,10 +6,16 @@ window {
     box-sizing: border-box;
 }
 
-@media screen and (prefers-reduced-motion: reduce) {
-    * {
-        transition: none !important;
-        animation: none !important;
+// @media screen and (prefers-reduced-motion: reduce) {
+//     * {
+//         transition: none !important;
+//         animation: none !important;
+//     }
+// }
+
+:root {
+    @media (prefers-reduced-motion: no-preference) {
+        scroll-behavior: smooth;
     }
 }
 
@@ -19,6 +25,8 @@ body {
     margin: 0;
     background-color: hsl(var(--body-bg-tone));
     color: var(--body-color);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(black, 0);
 }
 
 button, input, textarea, select {

@@ -19,14 +19,15 @@ th {
     width: 100%;
     border-collapse: collapse;
 
-    thead th {
-        vertical-align: bottom;
-        border-bottom: 2px solid var(--control-bg-stronger);
-    }
-
     td, th {
         padding: .75rem;
         vertical-align: top;
         border-top: 1px solid var(--control-bg-stronger);
+    }
+
+    thead th {
+        vertical-align: bottom;
+        border-bottom: 2px solid var(--control-bg-stronger);
+        border-top: none;
     }
 }

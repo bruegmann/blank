@@ -3,7 +3,7 @@
     transition: all .2s;
 
     &:hover {
-        color: var(--active-color);
+        color: hsl(var(--active-color-tone));
         background-color: var(--control-bg);
     }
 
@@ -11,6 +11,8 @@
         &, &:hover {
             color: var(--front-color);
             background-color: transparent;
+            box-shadow: 0 2px 0 hsl(var(--primary-tone));
+            border-radius: 0 !important;
         }
     }
 }

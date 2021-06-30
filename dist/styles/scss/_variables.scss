@@ -62,7 +62,6 @@ $neumorphism-shadow-box-shadow-sm: 8px 8px 16px var(--neumorphism-shadow-color),
     --body-color-tone: #{derive-hsl-values-from-hex($white)};
     --body-color: hsla(var(--body-color-tone), .8);
     --front-color: hsl(var(--body-color-tone));
-    --active-color: #{rgba($white, .9)};
     --active-color-tone: var(--body-color-tone);
     --front-color: hsla(var(--active-color-tone), .9);
 

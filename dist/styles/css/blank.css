@@ -43,7 +43,6 @@
     --body-color-tone: 0deg, 0%, 100%;
     --body-color: hsla(var(--body-color-tone), .8);
     --front-color: hsl(var(--body-color-tone));
-    --active-color: rgba(255, 255, 255, 0.9);
     --active-color-tone: var(--body-color-tone);
     --front-color: hsla(var(--active-color-tone), .9);
     --primary-tone: 194.1666666667deg, 63.7168141593%, 44.3137254902%;
@@ -99,7 +98,6 @@
   --body-color-tone: 0deg, 0%, 100%;
   --body-color: hsla(var(--body-color-tone), .8);
   --front-color: hsl(var(--body-color-tone));
-  --active-color: rgba(255, 255, 255, 0.9);
   --active-color-tone: var(--body-color-tone);
   --front-color: hsla(var(--active-color-tone), .9);
   --primary-tone: 194.1666666667deg, 63.7168141593%, 44.3137254902%;
@@ -124,18 +122,20 @@ window {
   box-sizing: border-box;
 }
 
-@media screen and (prefers-reduced-motion: reduce) {
-  * {
-    transition: none !important;
-    animation: none !important;
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
   }
 }
+
 body {
   font-family: var(--font-family-base);
   line-height: 1.5;
   margin: 0;
   background-color: hsl(var(--body-bg-tone));
   color: var(--body-color);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 button, input, textarea, select {
@@ -249,14 +249,15 @@ th {
   width: 100%;
   border-collapse: collapse;
 }
-.table thead th {
-  vertical-align: bottom;
-  border-bottom: 2px solid var(--control-bg-stronger);
-}
 .table td, .table th {
   padding: 0.75rem;
   vertical-align: top;
   border-top: 1px solid var(--control-bg-stronger);
+}
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid var(--control-bg-stronger);
+  border-top: none;
 }
 
 .menu-item {
@@ -264,12 +265,14 @@ th {
   transition: all 0.2s;
 }
 .menu-item:hover {
-  color: var(--active-color);
+  color: hsl(var(--active-color-tone));
   background-color: var(--control-bg);
 }
 .menu-item.active, .menu-item.active:hover {
   color: var(--front-color);
   background-color: transparent;
+  box-shadow: 0 2px 0 hsl(var(--primary-tone));
+  border-radius: 0 !important;
 }
 
 @keyframes menu-item-border-appear {

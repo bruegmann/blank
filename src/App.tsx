@@ -2,7 +2,6 @@ import "./docs/docs.scss"
 
 import { Github, House, Newspaper, Puzzle } from "react-bootstrap-icons"
 import { getPhrase } from "./docs/shared"
-import { Button } from "./components/Button"
 import { MenuItem } from "./components/MenuItem"
 import { CSSProperties, useState } from "react"
 import { BrowserRouter as Router, Switch, Route, Link, NavLink } from "react-router-dom"
@@ -26,13 +25,11 @@ function App() {
                         <Logo /> <h6 className="ms-2 mb-0">Blank</h6>
                     </Link>
 
-                    <nav className="d-sm-flex align-items-center">
+                    <nav className="d-sm-flex align-items-center gap-1">
                         <MenuItem tag={NavLink} exact to="/" className="align-items-center"><House className="me-1" /> {getPhrase("Home")}</MenuItem>
                         <MenuItem tag={NavLink} to="/components" className="align-items-center"><Puzzle className="me-1" /> {getPhrase("Components")}</MenuItem>
                         <MenuItem tag={NavLink} to="/posts" className="align-items-center"><Newspaper className="me-1" /> {getPhrase("Posts")}</MenuItem>
-                        <MenuItem href="https://bruegmann.github.io/blue-react" target="_blank" rel="noopener noreferrer">Blue React</MenuItem>
 
-                        <MenuItem onClick={() => alert("Hi!")} className="me-1">Click me !</MenuItem>
                         <ThemeSwitch />
                     </nav>
                 </header>
