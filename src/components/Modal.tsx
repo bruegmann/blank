@@ -4,18 +4,15 @@ import { ReactNode, useEffect, useState } from "react"
 
 export interface ModalProps {
     children: ReactNode
-
-    /** Set className of inner elements */
-    classNames?: {
-        modalBody?: string
-    }
+    modalBodyClassName?: string
+    modalBodySpacing?: string
     show: boolean
     title?: string
     toggle: () => void
 }
 
 export function Modal(props: ModalProps) {
-    const { children, toggle, title, classNames } = props
+    const { children, toggle, title, modalBodyClassName, modalBodySpacing = "p-3" } = props
 
     const [show, setShow] = useState<boolean>()
     const [fadeOut, setFadeOut] = useState<boolean>(false)
@@ -44,7 +41,7 @@ export function Modal(props: ModalProps) {
 
                     <button className="btn-close" onClick={toggle} aria-label="Close"><X /></button>
                 </div>
-                <div className={clsx("modal-body body-bg-stronger p-3 rounded", classNames?.modalBody)}>
+                <div className={clsx(`modal-body body-bg-stronger ${modalBodySpacing} rounded`, modalBodyClassName)}>
                     {children}
                 </div>
             </div>

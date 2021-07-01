@@ -31,7 +31,9 @@ function Modal(props) {
   var children = props.children,
       toggle = props.toggle,
       title = props.title,
-      classNames = props.classNames;
+      modalBodyClassName = props.modalBodyClassName,
+      _props$modalBodySpaci = props.modalBodySpacing,
+      modalBodySpacing = _props$modalBodySpaci === void 0 ? "p-3" : _props$modalBodySpaci;
 
   var _useState = (0, _react.useState)(),
       _useState2 = _slicedToArray(_useState, 2),
@@ -80,7 +82,7 @@ function Modal(props) {
           children: /*#__PURE__*/(0, _jsxRuntime.jsx)(_reactBootstrapIcons.X, {})
         })]
       }), /*#__PURE__*/(0, _jsxRuntime.jsx)("div", {
-        className: (0, _clsx.default)("modal-body body-bg-stronger p-3 rounded", classNames === null || classNames === void 0 ? void 0 : classNames.modalBody),
+        className: (0, _clsx.default)("modal-body body-bg-stronger ".concat(modalBodySpacing, " rounded"), modalBodyClassName),
         children: children
       })]
     })]

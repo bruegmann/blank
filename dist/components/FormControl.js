@@ -9,7 +9,7 @@ var _clsx = _interopRequireDefault(require("clsx"));
 
 var _jsxRuntime = require("react/jsx-runtime");
 
-var _excluded = ["tag", "shadow", "silent"];
+var _excluded = ["tag", "shadow", "silent", "spacing"];
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -27,11 +27,13 @@ function FormControl(_ref) {
   var tag = _ref.tag,
       shadow = _ref.shadow,
       silent = _ref.silent,
+      _ref$spacing = _ref.spacing,
+      spacing = _ref$spacing === void 0 ? "p-2" : _ref$spacing,
       rest = _objectWithoutProperties(_ref, _excluded);
 
   var Tag = tag || "input";
   return /*#__PURE__*/(0, _jsxRuntime.jsx)(Tag, _objectSpread(_objectSpread({}, rest), {}, {
-    className: (0, _clsx.default)("form-control p-2 rounded", {
+    className: (0, _clsx.default)("form-control ".concat(spacing, " rounded"), {
       "neumorphism-shadow-sm": shadow === "sm" || shadow === undefined,
       "neumorphism-shadow": shadow === true,
       silent: silent

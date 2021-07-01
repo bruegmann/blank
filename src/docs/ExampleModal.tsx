@@ -14,7 +14,7 @@ export default function ExampleModal({ }: ExampleModalProps) {
     return (
         <>
             <Button onClick={toggle} className="mb-3 neumorphism-shadow-sm">Open modal</Button>
-            <Modal show={show} toggle={toggle} title="Modal title" classNames={{ modalBody: "p-4" }}>
+            <Modal show={show} toggle={toggle} title="Modal title" modalBodySpacing="p-4">
                 <h1>Modal content</h1>
 
                 <p>

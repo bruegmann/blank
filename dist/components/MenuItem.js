@@ -9,7 +9,7 @@ var _clsx = _interopRequireDefault(require("clsx"));
 
 var _jsxRuntime = require("react/jsx-runtime");
 
-var _excluded = ["tag"];
+var _excluded = ["tag", "spacing"];
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -25,10 +25,12 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 function MenuItem(_ref) {
   var tag = _ref.tag,
+      _ref$spacing = _ref.spacing,
+      spacing = _ref$spacing === void 0 ? "py-2 px-3" : _ref$spacing,
       rest = _objectWithoutProperties(_ref, _excluded);
 
   var Tag = tag || (rest.href ? "a" : "button");
   return /*#__PURE__*/(0, _jsxRuntime.jsx)(Tag, _objectSpread(_objectSpread({}, rest), {}, {
-    className: (0, _clsx.default)("menu-item py-2 px-3 rounded d-flex d-md-inline-flex", rest.className)
+    className: (0, _clsx.default)("menu-item ".concat(spacing, " rounded d-flex d-md-inline-flex"), rest.className)
   }));
 }

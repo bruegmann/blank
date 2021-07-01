@@ -1,10 +1,8 @@
 import { ReactNode } from "react";
 export interface ModalProps {
     children: ReactNode;
-    /** Set className of inner elements */
-    classNames?: {
-        modalBody?: string;
-    };
+    modalBodyClassName?: string;
+    modalBodySpacing?: string;
     show: boolean;
     title?: string;
     toggle: () => void;
