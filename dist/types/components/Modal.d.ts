@@ -9,4 +9,4 @@ export interface ModalProps {
     title?: string;
     toggle: () => void;
 }
-export default function Modal(props: ModalProps): JSX.Element;
+export declare function Modal(props: ModalProps): JSX.Element;

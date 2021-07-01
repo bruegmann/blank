@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "../components/Button";
-import Modal from "../components/Modal";
+import { Modal } from "../components/Modal";
 import { ThemeSwitch } from "./ThemeSwitch";
 
 export interface ExampleModalProps {

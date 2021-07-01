@@ -14,7 +14,7 @@ export interface ModalProps {
     toggle: () => void
 }
 
-export default function Modal(props: ModalProps) {
+export function Modal(props: ModalProps) {
     const { children, toggle, title, classNames } = props
 
     const [show, setShow] = useState<boolean>()
