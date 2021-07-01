@@ -33,7 +33,8 @@ function Modal(props) {
       title = props.title,
       modalBodyClassName = props.modalBodyClassName,
       _props$modalBodySpaci = props.modalBodySpacing,
-      modalBodySpacing = _props$modalBodySpaci === void 0 ? "p-3" : _props$modalBodySpaci;
+      modalBodySpacing = _props$modalBodySpaci === void 0 ? "p-3" : _props$modalBodySpaci,
+      onFinishAnimation = props.onFinishAnimation;
 
   var _useState = (0, _react.useState)(),
       _useState2 = _slicedToArray(_useState, 2),
@@ -52,6 +53,7 @@ function Modal(props) {
       setTimeout(function () {
         setFadeOut(false);
         setShow(props.show);
+        if (onFinishAnimation) onFinishAnimation();
       }, 200);
     } else {
       setShow(props.show);

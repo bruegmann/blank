@@ -6,13 +6,14 @@ export interface ModalProps {
     children: ReactNode
     modalBodyClassName?: string
     modalBodySpacing?: string
+    onFinishAnimation?: () => void
     show: boolean
     title?: string
     toggle: () => void
 }
 
 export function Modal(props: ModalProps) {
-    const { children, toggle, title, modalBodyClassName, modalBodySpacing = "p-3" } = props
+    const { children, toggle, title, modalBodyClassName, modalBodySpacing = "p-3", onFinishAnimation } = props
 
     const [show, setShow] = useState<boolean>()
     const [fadeOut, setFadeOut] = useState<boolean>(false)
@@ -24,6 +25,7 @@ export function Modal(props: ModalProps) {
             setTimeout(() => {
                 setFadeOut(false)
                 setShow(props.show)
+                if (onFinishAnimation) onFinishAnimation()
             }, 200)
         }
         else {
