@@ -1,3 +1,4 @@
+import { Table } from "../components/Table"
 import { DocumentedComponent } from "./shared"
 
 export interface ComponentProps {
@@ -11,7 +12,7 @@ export default function Component({ comp }: ComponentProps) {
 
             <h3>Props</h3>
 
-            <table className="table rounded overflow-hidden neumorphism-shadow-sm" style={{ backgroundColor: "var(--body-bg-stronger)" }}>
+            <Table>
                 <thead>
                     <tr>
                         <th>Component</th>
@@ -34,7 +35,7 @@ export default function Component({ comp }: ComponentProps) {
                         </tr>
                     )}
                 </tbody>
-            </table>
+            </Table>
         </article>
     )
 }
